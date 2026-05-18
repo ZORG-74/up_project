@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход | Notes App</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-card">
+            <div class="logo">
+                📝
+            </div>
+            <h1>Мои заметки</h1>
+            <p class="subtitle">Войдите, чтобы продолжить</p>
+            
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <div class="input-icon">
+                        <span class="icon">📧</span>
+                        <input type="email" id="email" name="email" placeholder="ivan@example.com" required>
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <label for="password">Пароль</label>
+                    <div class="input-icon">
+                        <span class="icon">🔒</span>
+                        <input type="password" id="password" name="password" placeholder="Введите пароль" required>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn-login">Войти</button>
+            </form>
+            
+            <div class="register-link">
+                Нет аккаунта? <a href="register.html">Зарегистрироваться</a>
+            </div>
+            
+            <div id="errorMessage" class="error-message" style="display: none;"></div>
+        </div>
+    </div>
+    
+    <script src="login.js"></script>
+</body>
+</html>

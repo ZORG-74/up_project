@@ -1,0 +1,415 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+.header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 16px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    font-size: 28px;
+}
+
+.logo-text {
+    font-size: 22px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.header-buttons, .user-menu {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-menu {
+    background: #f0f0f0;
+    padding: 5px 20px;
+    border-radius: 40px;
+}
+
+.user-avatar {
+    font-size: 20px;
+}
+
+.user-name {
+    font-weight: 500;
+    color: #333;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+}
+
+.btn-outline {
+    background: transparent;
+    color: #667eea;
+    border: 2px solid #667eea;
+    padding: 8px 22px;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    background: #667eea;
+    color: white;
+}
+
+.btn-logout {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+    color: white;
+    border: none;
+    padding: 6px 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.btn-large {
+    padding: 14px 32px;
+    font-size: 16px;
+}
+
+.hero {
+    padding: 80px 40px;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 52px;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.hero-buttons .btn-primary {
+    background: white;
+    color: #667eea;
+}
+
+.hero-buttons .btn-primary:hover {
+    background: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.3);
+}
+
+.hero-buttons .btn-outline {
+    border-color: white;
+    color: white;
+}
+
+.hero-buttons .btn-outline:hover {
+    background: white;
+    color: #667eea;
+}
+
+.auth-prompt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    padding: 40px;
+}
+
+.prompt-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 32px;
+    padding: 50px 60px;
+    text-align: center;
+    max-width: 500px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.prompt-icon {
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+
+.prompt-card h3 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.prompt-card p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.prompt-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.notes-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.actions-panel {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 24px;
+    padding: 20px 32px;
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.search-box {
+    flex: 1;
+    min-width: 250px;
+    position: relative;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 14px 20px 14px 48px;
+    border: 2px solid #e0e0e0;
+    border-radius: 40px;
+    font-size: 16px;
+}
+
+.search-box::before {
+    content: '🔍';
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.create-btn {
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 40px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.notes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 28px;
+}
+
+.note-card {
+    background: white;
+    border-radius: 20px;
+    padding: 24px;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.note-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.note-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1a1a2e;
+    margin-bottom: 12px;
+}
+
+.note-card p {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.note-date {
+    font-size: 11px;
+    color: #aaa;
+    margin-bottom: 16px;
+}
+
+.note-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    border-top: 1px solid #eee;
+    padding-top: 16px;
+}
+
+.edit-btn, .delete-btn {
+    padding: 6px 18px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.edit-btn {
+    background: #3498db;
+    color: white;
+}
+
+.delete-btn {
+    background: #e74c3c;
+    color: white;
+}
+
+.empty-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 60px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 32px;
+}
+
+.empty-state .emoji {
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 32px;
+    padding: 32px;
+    width: 550px;
+    max-width: 90%;
+}
+
+.modal-content input,
+.modal-content textarea {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #e0e0e0;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    font-family: inherit;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.save-btn, .cancel-btn, .delete-modal-btn {
+    flex: 1;
+    padding: 12px;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+.save-btn {
+    background: #4caf50;
+    color: white;
+}
+
+.cancel-btn {
+    background: #95a5a6;
+    color: white;
+}
+
+.delete-modal-btn {
+    background: #e74c3c;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 16px 20px;
+    }
+
+    .hero {
+        padding: 50px 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .prompt-card {
+        padding: 30px 25px;
+    }
+
+    .notes-container {
+        padding: 20px;
+    }
+
+    .notes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-buttons {
+        flex-direction: column;
+    }
+}

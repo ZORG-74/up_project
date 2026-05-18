@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация | Notes App</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <div class="container">
+        <div class="register-card">
+            <div class="logo">
+                📝
+            </div>
+            <h1>Создать аккаунт</h1>
+            <p class="subtitle">Заполните форму для регистрации</p>
+            
+            <form id="registerForm">
+                <div class="input-group">
+                    <label for="name">Имя</label>
+                    <div class="input-icon">
+                        <span class="icon">👤</span>
+                        <input type="text" id="name" name="name" placeholder="Иван Петров" required>
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <div class="input-icon">
+                        <span class="icon">📧</span>
+                        <input type="email" id="email" name="email" placeholder="ivan@example.com" required>
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <label for="password">Пароль</label>
+                    <div class="input-icon">
+                        <span class="icon">🔒</span>
+                        <input type="password" id="password" name="password" placeholder="Минимум 8 символов" required>
+                    </div>
+                    <small class="input-hint">Пароль должен содержать минимум 8 символов</small>
+                </div>
+                
+                <div class="input-group">
+                    <label for="confirmPassword">Подтверждение пароля</label>
+                    <div class="input-icon">
+                        <span class="icon">✓</span>
+                        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Введите пароль ещё раз" required>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn-register">Зарегистрироваться</button>
+            </form>
+            
+            <div class="login-link">
+                Уже есть аккаунт? <a href="login.html">Войти</a>
+            </div>
+            
+            <div id="errorMessage" class="error-message" style="display: none;"></div>
+            <div id="successMessage" class="success-message" style="display: none;"></div>
+        </div>
+    </div>
+    
+    <script src="register.js"></script>
+</body>
+</html>

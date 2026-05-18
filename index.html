@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App | Ваши заметки всегда с вами</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <span class="logo-icon">📝</span>
+            <span class="logo-text">NotesApp</span>
+        </div>
+        <div class="header-buttons" id="authButtons">
+            <button class="btn-outline" id="loginBtn">Войти</button>
+            <button class="btn-primary" id="registerBtn">Регистрация</button>
+        </div>
+        <div class="user-menu" id="userMenu" style="display: none;">
+            <span class="user-avatar">👤</span>
+            <span class="user-name" id="userNameDisplay">Пользователь</span>
+            <button class="btn-logout" id="logoutBtn">Выйти</button>
+        </div>
+    </div>
+
+    <div class="hero" id="guestHero">
+        <div class="hero-content">
+            <h1>Ваши заметки<br>всегда под рукой</h1>
+            <p>Создавайте, редактируйте и организуйте свои заметки в одном месте.<br>Доступ с любого устройства.</p>
+            <div class="hero-buttons">
+                <button class="btn-large btn-primary" id="heroRegisterBtn">Начать бесплатно</button>
+                <button class="btn-large btn-outline" id="heroLoginBtn">Уже есть аккаунт? Войти</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="notes-container" id="notesContainer" style="display: none;">
+        <div class="actions-panel">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Поиск заметок...">
+            </div>
+            <button class="create-btn" id="createNoteBtn">+ Новая заметка</button>
+        </div>
+
+        <div id="notesList" class="notes-grid">
+            <!-- Здесь будут заметки -->
+        </div>
+    </div>
+
+    <div class="auth-prompt" id="authPrompt">
+        <div class="prompt-card">
+            <div class="prompt-icon">🔒</div>
+            <h3>Войдите, чтобы увидеть свои заметки</h3>
+            <p>Все ваши заметки сохраняются в облаке и доступны с любого устройства</p>
+            <div class="prompt-buttons">
+                <button class="btn-primary" id="promptLoginBtn">Войти</button>
+                <button class="btn-outline" id="promptRegisterBtn">Зарегистрироваться</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="noteModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <h2 id="modalTitle">Создать заметку</h2>
+            <input type="text" id="noteTitle" placeholder="Заголовок заметки">
+            <textarea id="noteContent" rows="8" placeholder="Текст заметки..."></textarea>
+            <input type="hidden" id="noteId">
+            <div class="modal-buttons">
+                <button class="save-btn" id="saveNoteBtn">💾 Сохранить</button>
+                <button class="cancel-btn" id="cancelModalBtn">Отмена</button>
+                <button class="delete-modal-btn" id="deleteNoteBtn" style="display: none;">🗑️ Удалить</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
